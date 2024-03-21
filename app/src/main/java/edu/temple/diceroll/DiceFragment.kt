@@ -35,8 +35,7 @@ class DiceFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_dice, container, false).apply {
             findViewById<Button>(R.id.rollButton).setOnClickListener {
 
-                // Generate random number
-                (Random.nextInt(sides!!) + 1).toString()
+                viewModel.setselectnum( (Random.nextInt(sides!!) + 1))
             }
         }
     }
